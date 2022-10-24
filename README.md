@@ -48,6 +48,7 @@ Jak je deklarována konstanta? Proč je pro funkci kinematika uvedena dopředná
     _zrychleny_.
 5. Funkce _kinematika_vypisTabulky_ zobrazí informace o pohybu dle uvedeného vzoru.
 
+![image](https://user-images.githubusercontent.com/56117532/197610128-afe196c5-54a5-40da-b3d4-040b23acd5e1.png)
 
 Pozn: Dodržujte předepsaný formát zobrazení výsledku. Hodnoty v ukázce nemusí být relevantní.
 
