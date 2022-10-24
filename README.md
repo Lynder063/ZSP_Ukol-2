@@ -1,8 +1,9 @@
 # ZSP_Ukol-2
 
-## Zadání
+## Neoficialní zadání
 
-### Kinematika
+
+## Officiální zadání
 
 Program pro výpočet pohybu (kinematika hmotného bodu). Vstupem je počáteční rychlost v0; doba
 t0, ve které je měřena rychlost v1; rychlost v1 a čas t, pro který se počítá ujetá dráha a vyhodnocuje
