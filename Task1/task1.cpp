@@ -39,10 +39,8 @@ void note()
         uvod = 0;
         printf("Kinematika - program pro vypocet rovnomerne zrychleneho pohybu.\n\n");
         printf("jmeno: Darius Xerxes\n");
-        printf("login: darius_xerxes\n");    // todo: zobrazit login autora - jeste musim doptat ucitele
+        printf("login: xerxes\n");
         printf("datum plneni ukolu: 26.11.2011\n");
-
-        // todo: do promìnné zapsat text s názvem úkolu (bez tìch špièatých závorek): <nazev ukolu: ZSP - Domaci ukol c. 2 - "Kinematika"> a zajistit dvakrát odøádkování
         printf(nazev_ukolu);
     }
 }
