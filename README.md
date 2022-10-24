@@ -1,7 +1,7 @@
 # ZSP_Ukol-2
 
 ## Neoficialní zadání
-
+Zabiju se
 
 ## Officiální zadání
 
