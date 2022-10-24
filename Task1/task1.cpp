@@ -33,14 +33,14 @@ double pomer;   // pomìr rychlostí v1 a v0
 int typPohybu;  // identifikator typu pohybu {1 - zrychlený pohyb; 2 - konstantní pohyb; 3 - zpomalený pohyb}
 
 void note()
-// funkce zobrazí informace o autorovi a o realizaci úkolu
-{//todo(1)
+{
+    char nazev_ukolu[] = "ZSP - Domaci ukol c. 2 - \"Kinematika\"";
     if (uvod == 1) {
         uvod = 0;
         printf("Kinematika - program pro vypocet rovnomerne zrychleneho pohybu.\n\n");
-        printf("jmeno: \n");    // todo: zobrazit jméno a pøíjmení autora
-        printf("login: \n");    // todo: zobrazit login autora
-        printf("datum plneni ukolu: \n");   // todo: zobrazit datum realizace úkolu ve tvaru napø. 17.10.2022
+        printf("jmeno: Darius Xerxes\n");
+        printf("login: darius_xerxes\n");    // todo: zobrazit login autora - jeste musim doptat ucitele
+        printf("datum plneni ukolu: 26.11.2011\n");
 
         // todo: do promìnné zapsat text s názvem úkolu (bez tìch špièatých závorek): <nazev ukolu: ZSP - Domaci ukol c. 2 - "Kinematika"> a zajistit dvakrát odøádkování
         printf(nazev_ukolu);
