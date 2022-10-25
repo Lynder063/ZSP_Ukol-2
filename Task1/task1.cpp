@@ -58,6 +58,31 @@ int intro(float v0_p, float v1_p, float t0_p, float t_p)
     t0 = t0_p;
     t = t_p;
 
+    if (v0 > 0) {
+        if (v1 > 0) {
+            if (t0 > 0) {
+                if (t > 0) {
+                    return 0;
+                        kinematika();
+                }
+                else {
+                    return -4
+                }
+            }
+            else {
+                return -3
+            }
+        }
+        else {
+            return -2
+        }
+    }
+    else {
+        return -1
+    }
+
+
+
     // ------
     // 
     //todo(2): Podminky na zapornost vstupnich hodnot. 
@@ -66,7 +91,7 @@ int intro(float v0_p, float v1_p, float t0_p, float t_p)
     //      Vrátí hodnotu -1 : špatnì je v0; -2 : špatnì je v1; -3 : špatnì je t0; -4 : špatnì je t. V pøípadì zjištìné chyby navíc zobrazí informaci
     //      <Vstupni hodnoty nejsou platne.Hodnoty nesmi byt zapornymi cisly.> a na další øádek <Uspesne neprovedeno.>.
 
-    return -5;
+    //return -5;
 }
 
 void kinematika_vypocet()
