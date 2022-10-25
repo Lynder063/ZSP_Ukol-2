@@ -98,6 +98,10 @@ void kinematika_vypocet()
 // funkce dopoèítá na základì vstupních hodnot všechny výstupní hodnoty
 {//todo(3):
     // realizace výpoètu výstupních hodnot dle vzorcù a logického vyhodnocení
+
+    //a = (v1 - v0) / t0
+    //v = v0 + a * t
+    //s = s0 + v0t + 0.5a*t^2
 }
 
 
