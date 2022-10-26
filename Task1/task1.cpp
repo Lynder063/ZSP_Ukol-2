@@ -34,13 +34,13 @@ int typPohybu;  // identifikator typu pohybu {1 - zrychlený pohyb; 2 - konstant
 
 void note()
 {
-    char nazev_ukolu[] = "ZSP - Domaci ukol c. 2 - \"Kinematika\"";
+    char nazev_ukolu[] = "ZSP - Domaci ukol c. 2 - \"Kinematika\"\n";
     if (uvod == 1) {
         uvod = 0;
         printf("Kinematika - program pro vypocet rovnomerne zrychleneho pohybu.\n\n");
-        printf("jmeno: Darius Xerxes\n");
-        printf("login: xerxes\n");
-        printf("datum plneni ukolu: 26.11.2011\n");
+        printf("jmeno: Krystof Malinda\n");
+        printf("login: malinda\n");
+        printf("datum plneni ukolu: 26.10.2022\n");
         printf(nazev_ukolu);
     }
 }
@@ -62,26 +62,24 @@ int intro(float v0_p, float v1_p, float t0_p, float t_p)
         if (v1 > 0) {
             if (t0 > 0) {
                 if (t > 0) {
+                    kinematika();
                     return 0;
-                        kinematika();
                 }
-                else {
+                else {                  
                     return -4;
                 }
             }
-            else {
+            else {               
                 return -3;
             }
         }
-        else {
+        else {          
             return -2;
         }
     }
-    else {
+    else {     
         return -1;
     }
-
-
 
     // ------
     // 
@@ -91,7 +89,7 @@ int intro(float v0_p, float v1_p, float t0_p, float t_p)
     //      Vrátí hodnotu -1 : špatnì je v0; -2 : špatnì je v1; -3 : špatnì je t0; -4 : špatnì je t. V pøípadì zjištìné chyby navíc zobrazí informaci
     //      <Vstupni hodnoty nejsou platne.Hodnoty nesmi byt zapornymi cisly.> a na další øádek <Uspesne neprovedeno.>.
 
-    //return -5;
+    return -5;
 }
 
 void kinematika_vypocet()
@@ -99,11 +97,10 @@ void kinematika_vypocet()
 {//todo(3):
     // realizace výpoètu výstupních hodnot dle vzorcù a logického vyhodnocení
 
-
-
     a = (v1 - v0) / t0;
     v = v0 + a * t;
-    s = s0 + (v0*t) + (0.5*a) * pow(t, 2); //t ^ 2 
+    //s = s0 + v0 * t + 0.5 * a * t * t;
+    s = s0 + v0 * t + 0.5 * a * pow(t, 2);
 
     pomer = v1 / v0;
 
@@ -113,7 +110,7 @@ void kinematika_vypocet()
     else if (a > 0) {
         typPohybu = 3;
     }
-    else if(a = 0) {
+    else if(a == 0) {
         typPohybu = 2;
     }
 
@@ -126,25 +123,32 @@ void kinematika_vypisPohybu()
 //  <Pohyb je rovnomerne zpomaleny>; <Pohyb je konstantni>; <Pohyb je rovnomerne zrychleny> a zajistí jedno odøádkování
 {
     if (typPohybu == 1) {
-        printf("Pohyb je rovnomerne zpomaleny");
+        printf("Pohyb je rovnomerne zpomaleny\n");
     }
     else if (typPohybu == 2) {
-        printf("Pohyb je konstatni");
+        printf("Pohyb je konstatni\n");
     }
     else if (typPohybu == 3) {
-        printf("Pohyb je rovnomerne zrychleny");
+        printf("Pohyb je rovnomerne zrychleny\n");
     }
         
-         
+ 
 }
 
 void kinematika_vypisTabulky()
 // funkce vypíše výsledky a přehledovou tabulku dle vzoru uvedeném v zadání
 {
     printf("Tabulka vysledku\n");
-    //todo(5):
-
-    return;
+    printf("\tv0\t\t%.2f/h\n", v0);
+    printf("\tv1\t\t%.2f/h\n",v1);
+    printf("\tt0\t\t%.2fh\n",t0);
+    printf("\tt\t\t%.2fh\n",t);
+    printf("\ta\t\t%.2fh\n",a);
+    printf("\tv\t\t%.2f/h^2\n",v);
+    printf("\ts\t\t%.2f/h\n",s);
+    printf("\tpomer v\t\t%.2f%%\n",pomer);
+    printf("Vypocet proveden uspesne.\n");
+    return ;
 }
 
 
@@ -155,6 +159,8 @@ int kinematika()  // funkce kinematika
 
     //todo(5):
     // zajistit realizaci výpoètu a zobrazení výsledkù podmínit validitou vstupních dat. 
+
+    kinematika_vypocet();
 
     kinematika_vypisPohybu();
     kinematika_vypisTabulky();
