@@ -66,19 +66,19 @@ int intro(float v0_p, float v1_p, float t0_p, float t_p)
                         kinematika();
                 }
                 else {
-                    return -4
+                    return -4;
                 }
             }
             else {
-                return -3
+                return -3;
             }
         }
         else {
-            return -2
+            return -2;
         }
     }
     else {
-        return -1
+        return -1;
     }
 
 
@@ -98,6 +98,8 @@ void kinematika_vypocet()
 // funkce dopoèítá na základì vstupních hodnot všechny výstupní hodnoty
 {//todo(3):
     // realizace výpoètu výstupních hodnot dle vzorcù a logického vyhodnocení
+
+
 
     //a = (v1 - v0) / t0
     //v = v0 + a * t
