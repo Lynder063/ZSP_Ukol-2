@@ -101,9 +101,22 @@ void kinematika_vypocet()
 
 
 
-    //a = (v1 - v0) / t0
-    //v = v0 + a * t
-    //s = s0 + v0t + 0.5a*t^2
+    a = (v1 - v0) / t0;
+    v = v0 + a * t;
+    s = s0 + (v0*t) + (0.5*a) * pow(t, 2); //t ^ 2 
+
+    pomer = v1 / v0;
+
+    if (a < 0) {
+        typPohybu = 1;
+    }
+    else if (a > 0) {
+        typPohybu = 3;
+    }
+    else (a = 0); {
+        typPohybu = 2;
+    }
+
 }
 
 
