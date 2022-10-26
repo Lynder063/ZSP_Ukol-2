@@ -1,11 +1,11 @@
-/*
+ï»¿/*
 * Nazev programu: Kinematika
 *
 * Autor: Darius Xerxes
 *
 * Datum: 26.11.2021
 *  Tento program je pro vypocet rovnomerne zrychleneho pohybu. 
-* Ve funkci intro se nastaví vstupni hodnoty, pokud jsou hodnoty zaporne program skonci. 
+* Ve funkci intro se nastavÃ­ vstupni hodnoty, pokud jsou hodnoty zaporne program skonci. 
 * Dale se ve funcki vola funkce kinematika, ktera zajistuje veskere vypocty a pote jejich vypsani, 
 * vypisuje i typ pohybu. Funkce kinematika take vypisuje prehledovou tabulku.
 */
@@ -16,21 +16,21 @@
 #include <math.h>  //matematicke funkce
 #include "task1.h"
 
-// -- globální promìnné
+// -- globÃ¡lnÃ­ promÃ¬nnÃ©
 char nazev_ukolu[255];
 int uvod = 1;
-// vstupní hodnoty
-const double s0 = 0.0; // poèáteèní dráha
-double v0;  // poèáteèní rychlost
-double v1;  // rychlost v èase t0
-double t0;  // poèáteèní èas
-double t;   // koneènı èas
-// vystupní hodnoty
-double a;   // zrychlení
-double s;   // dráha ujetá v èase <t>
-double v;   // rychlost v èase <t>
-double pomer;   // pomìr rychlostí v1 a v0
-int typPohybu;  // identifikator typu pohybu {1 - zrychlenı pohyb; 2 - konstantní pohyb; 3 - zpomalenı pohyb}
+// vstupnÃ­ hodnoty
+const double s0 = 0.0; // poÃ¨Ã¡teÃ¨nÃ­ drÃ¡ha
+double v0;  // poÃ¨Ã¡teÃ¨nÃ­ rychlost
+double v1;  // rychlost v Ã¨ase t0
+double t0;  // poÃ¨Ã¡teÃ¨nÃ­ Ã¨as
+double t;   // koneÃ¨nÃ½ Ã¨as
+// vystupnÃ­ hodnoty
+double a;   // zrychlenÃ­
+double s;   // drÃ¡ha ujetÃ¡ v Ã¨ase <t>
+double v;   // rychlost v Ã¨ase <t>
+double pomer;   // pomÃ¬r rychlostÃ­ v1 a v0
+int typPohybu;  // identifikator typu pohybu {1 - zrychlenÃ½ pohyb; 2 - konstantnÃ­ pohyb; 3 - zpomalenÃ½ pohyb}
 
 void note()
 {
@@ -48,10 +48,10 @@ void note()
 int kinematika();
 
 int intro(float v0_p, float v1_p, float t0_p, float t_p)
-// funkce, ktera nahrazuje naètení hodnot z klávesnice uivatele,
-// kontroluje se zde, zda jsou èísla záporná, pokud ano, pak funkce skonèí, 
-// pokud ne, pak se zavolá funkce kinematika a vıpis, zda probìhl program
-// návratová hodnota indikuje úspìch provedení operace nebo typ chyby
+// funkce, ktera nahrazuje naÃ¨tenÃ­ hodnot z klÃ¡vesnice uÅ¾ivatele,
+// kontroluje se zde, zda jsou Ã¨Ã­sla zÃ¡pornÃ¡, pokud ano, pak funkce skonÃ¨Ã­, 
+// pokud ne, pak se zavolÃ¡ funkce kinematika a vÃ½pis, zda probÃ¬hl program
+// nÃ¡vratovÃ¡ hodnota indikuje ÃºspÃ¬ch provedenÃ­ operace nebo typ chyby
 {
     v0 = v0_p;
     v1 = v1_p;
@@ -86,18 +86,18 @@ int intro(float v0_p, float v1_p, float t0_p, float t_p)
     // ------
     // 
     //todo(2): Podminky na zapornost vstupnich hodnot. 
-    //      Kontrolovat smysluplnost vstupních hodnot v0, v1, t0, t a to kontrolovat v uvedeném poøadí. Hodnoty nesmí bıt záporné. 
-    //      Funkce intro vrátí hodnotu 0, pokud jsou hodnoty v poøádku. A zavolá funkci kinematika pro realizaci vıpoètu.
-    //      Vrátí hodnotu -1 : špatnì je v0; -2 : špatnì je v1; -3 : špatnì je t0; -4 : špatnì je t. V pøípadì zjištìné chyby navíc zobrazí informaci
-    //      <Vstupni hodnoty nejsou platne.Hodnoty nesmi byt zapornymi cisly.> a na další øádek <Uspesne neprovedeno.>.
+    //      Kontrolovat smysluplnost vstupnÃ­ch hodnot v0, v1, t0, t a to kontrolovat v uvedenÃ©m poÃ¸adÃ­. Hodnoty nesmÃ­ bÃ½t zÃ¡pornÃ©. 
+    //      Funkce intro vrÃ¡tÃ­ hodnotu 0, pokud jsou hodnoty v poÃ¸Ã¡dku. A zavolÃ¡ funkci kinematika pro realizaci vÃ½poÃ¨tu.
+    //      VrÃ¡tÃ­ hodnotu -1 : Å¡patnÃ¬ je v0; -2 : Å¡patnÃ¬ je v1; -3 : Å¡patnÃ¬ je t0; -4 : Å¡patnÃ¬ je t. V pÃ¸Ã­padÃ¬ zjiÅ¡tÃ¬nÃ© chyby navÃ­c zobrazÃ­ informaci
+    //      <Vstupni hodnoty nejsou platne.Hodnoty nesmi byt zapornymi cisly.> a na dalÅ¡Ã­ Ã¸Ã¡dek <Uspesne neprovedeno.>.
 
     //return -5;
 }
 
 void kinematika_vypocet()
-// funkce dopoèítá na základì vstupních hodnot všechny vıstupní hodnoty
+// funkce dopoÃ¨Ã­tÃ¡ na zÃ¡kladÃ¬ vstupnÃ­ch hodnot vÅ¡echny vÃ½stupnÃ­ hodnoty
 {//todo(3):
-    // realizace vıpoètu vıstupních hodnot dle vzorcù a logického vyhodnocení
+    // realizace vÃ½poÃ¨tu vÃ½stupnÃ­ch hodnot dle vzorcÃ¹ a logickÃ©ho vyhodnocenÃ­
 
 
 
@@ -113,7 +113,7 @@ void kinematika_vypocet()
     else if (a > 0) {
         typPohybu = 3;
     }
-    else (a = 0); {
+    else if(a = 0) {
         typPohybu = 2;
     }
 
@@ -122,16 +122,25 @@ void kinematika_vypocet()
 
 void kinematika_vypisPohybu() 
 // funkce pro vypis informace o pohybu
-// zobrazí textovı popis pohybu zjištìného typu pohybu: 
-//  <Pohyb je rovnomerne zpomaleny>; <Pohyb je konstantni>; <Pohyb je rovnomerne zrychleny> a zajistí jedno odøádkování
+// zobrazÃ­ textovÃ½ popis pohybu zjiÅ¡tÃ¬nÃ©ho typu pohybu: 
+//  <Pohyb je rovnomerne zpomaleny>; <Pohyb je konstantni>; <Pohyb je rovnomerne zrychleny> a zajistÃ­ jedno odÃ¸Ã¡dkovÃ¡nÃ­
 {
-    //todo(4):
-    ;
+    if (typPohybu == 1) {
+        printf("Pohyb je rovnomerne zpomaleny");
+    }
+    else if (typPohybu == 2) {
+        printf("Pohyb je konstatni");
+    }
+    else if (typPohybu == 3) {
+        printf("Pohyb je rovnomerne zrychleny");
+    }
+        
+         
 }
 
 void kinematika_vypisTabulky()
-// funkce vypíše vısledky a pøehledovou tabulku dle vzoru uvedeném v zadání
-{    
+// funkce vypÃ­Å¡e vÃ½sledky a pÅ™ehledovou tabulku dle vzoru uvedenÃ©m v zadÃ¡nÃ­
+{
     printf("Tabulka vysledku\n");
     //todo(5):
 
@@ -145,7 +154,7 @@ int kinematika()  // funkce kinematika
     note();
 
     //todo(5):
-    // zajistit realizaci vıpoètu a zobrazení vısledkù podmínit validitou vstupních dat. 
+    // zajistit realizaci vÃ½poÃ¨tu a zobrazenÃ­ vÃ½sledkÃ¹ podmÃ­nit validitou vstupnÃ­ch dat. 
 
     kinematika_vypisPohybu();
     kinematika_vypisTabulky();
