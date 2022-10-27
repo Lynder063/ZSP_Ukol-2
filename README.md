@@ -30,10 +30,10 @@ Jak je deklarována konstanta? Proč je pro funkci kinematika uvedena dopředná
     validní. Tato funkce zajišťuje realizaci výpočtu a zobrazení výsledků.
     Všechny hodnoty musí být nezáporným číslem. Funkce jako výsledek poskytuje hodnotu:
     0, pokud jsou vstupní hodnoty v pořádku (jsou správné)
-    - 1, pokud je špatně počáteční rychlost v
-    - 2, pokud je špatně koncová rychlost v1,
-    - 3 , pokud je špatně počáteční čas měření zrychlování t
-    - 4, pokud je špatně doba pohybu t
+    - -1, pokud je špatně počáteční rychlost v
+    - -2, pokud je špatně koncová rychlost v1,
+    - -3 , pokud je špatně počáteční čas měření zrychlování t
+    - -4, pokud je špatně doba pohybu t
 3. Funkce _kinematika_vypocet_ dopočítává výsledky pohybu a ukládá (zapisuje) spočtené hodnoty
     do příslušných výstupních (globálních) proměnných. Jako vstup použije hodnoty ze vstupních
     (globálních) proměnných.
