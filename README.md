@@ -1,7 +1,8 @@
 # ZSP_Ukol-2
 
 ## Neoficialní zadání
-Zabiju se
+Je to o čtení zadání, **jenom**
+Samotný úkol je na 10 minut ale díky tomu, že jsem byl líný číst jsem na tom dělal tak 6 hodin.
 
 ## Officiální zadání
 
