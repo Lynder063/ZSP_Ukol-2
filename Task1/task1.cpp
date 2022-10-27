@@ -65,19 +65,27 @@ int intro(float v0_p, float v1_p, float t0_p, float t_p)
                     kinematika();
                     return 0;
                 }
-                else {                  
+                else {
+                    printf("Vstupni hodnoty nejsou platne.Hodnoty nesmi byt zapornymi cisly.\n");
+                    printf("Uspesne neprovedeno\n");
                     return -4;
                 }
             }
-            else {               
+            else {
+                printf("Vstupni hodnoty nejsou platne.Hodnoty nesmi byt zapornymi cisly.\n");
+                printf("Uspesne neprovedeno\n");
                 return -3;
             }
         }
-        else {          
+        else {
+            printf("Vstupni hodnoty nejsou platne.Hodnoty nesmi byt zapornymi cisly.\n");
+            printf("Uspesne neprovedeno\n");
             return -2;
         }
     }
-    else {     
+    else {
+        printf("Vstupni hodnoty nejsou platne.Hodnoty nesmi byt zapornymi cisly.\n");
+        printf("Uspesne neprovedeno\n");
         return -1;
     }
 
@@ -110,9 +118,10 @@ void kinematika_vypocet()
     else if (a > 0) {
         typPohybu = 3;
     }
-    else if(a == 0) {
+    else if (a == 0) {
         typPohybu = 2;
     }
+
 
 }
 
@@ -131,8 +140,8 @@ void kinematika_vypisPohybu()
     else if (typPohybu == 3) {
         printf("Pohyb je rovnomerne zrychleny\n");
     }
-        
- 
+
+  
 }
 
 void kinematika_vypisTabulky()
